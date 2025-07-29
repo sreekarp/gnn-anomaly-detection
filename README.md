@@ -10,28 +10,23 @@ The final model successfully leverages a GAT-based architecture to achieve an **
 
 The repository is organized to clearly separate the final, working source code from the experimental scripts that document the project's journey.
 
-gnn-anomaly-detection/
-│
-├── data/
-│   └── (This directory is created automatically by the scripts to store the dataset)
-│
-├── notebooks/
-│   ├── attempt_1_latent_norm.py
-│   ├── attempt_2_recon_error.py
-│   └── phase_1_and_2.py
-│
-├── saved_models/
-│   └── semi_supervised_gae.pt
-│
-├── src/
-│   ├── init.py
-│   ├── models.py
-│   ├── train.py
-│   └── evaluate.py
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
+- **gnn-anomaly-detection/**
+  - **data/**
+    - (This directory is created automatically by the scripts to store the dataset)
+  - **notebooks/**
+    - attempt_1_latent_norm.py  
+    - attempt_2_recon_error.py  
+    - data_Set_and_iso_forest.py
+  - **saved_models/**
+    - semi_supervised_gae.pt
+  - **src/**
+    - __init__.py  
+    - models.py  
+    - train.py  
+    - evaluate.py
+  - .gitignore  
+  - requirements.txt  
+  - README.md
 
 ---
 
@@ -62,7 +57,7 @@ Follow these steps to set up the environment and run the project on your local m
 3.  **Install PyTorch with GPU Support:**
     This is the most important step. Go to the [PyTorch official website](https://pytorch.org/get-started/locally/) and use the interactive tool to find the correct installation command for your specific system (OS, package manager, CUDA version). For example, a common command is:
     ```bash
-    pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+    pip install torch --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
     ```
 
 4.  **Install Remaining Dependencies:**

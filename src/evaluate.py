@@ -31,7 +31,7 @@ print(" Data loaded and preprocessed.")
 test_mask = data.test_mask
 test_indices = torch.where(test_mask)[0]
 
-# 4. Load the Trained Model
+# Load the Trained Model
 in_channels = data.num_node_features
 hidden_channels_encoder = 128
 out_channels_encoder = 64
@@ -51,7 +51,7 @@ except FileNotFoundError:
 
 model.eval()
 
-# 5. Calculate Anomaly Scores (Corrected Logic)
+# Calculate Anomaly Scores
 with torch.no_grad():
     z = model.encode(data.x, data.edge_index)
     

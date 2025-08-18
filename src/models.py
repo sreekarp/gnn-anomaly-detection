@@ -32,7 +32,7 @@ class SemiSupervisedGAE(GAE):
         super(SemiSupervisedGAE, self).__init__(encoder)
         self.attr_decoder = attr_decoder
         # A simple linear layer to act as the classifier
-        self.classifier = nn.Linear(encoder.conv2.out_channels, 1) # Output 1 for binary classification
+        self.classifier = nn.Linear(encoder.conv2.out_channels, 1) # Output for binary classification
 
     def decode_attr(self, z):
         return self.attr_decoder(z)
